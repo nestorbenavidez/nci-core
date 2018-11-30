@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Insurance Ranges</strong>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Calculation type</th>
+                      <th colspan="3"></th>
+                    </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <% @insurance_ranges.each do |insurance_range| %>
+                <td><%= insurance_range.name %></td>
+                <td><%= insurance_range.calculation_type %></td>
+                <td><%= link_to 'Show', insurance_range %></td>
+                <td><%= link_to 'Edit', edit_insurance_range_path(insurance_range) %></td>
+                <td><%= link_to 'Destroy', insurance_range, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+              </tr>
+            </tbody>
+        </table>
+        <br>
+      </div>
+      <%= link_to 'New Insurance Range', new_insurance_range_path %>
+    </div>
+</div>

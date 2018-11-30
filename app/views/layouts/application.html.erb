@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>National Contractor Insurance</title>
+    <meta name="description" content="National Contractor Insurance">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="/admin/images/favicon.png">
+    <link rel="shortcut icon" href="/admin/images/favicon.png">
+
+    <link rel="stylesheet" href="/admin/assets/css/normalize.css">
+    <link rel="stylesheet" href="/admin/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/admin/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/admin/assets/css/pe-icon-7-filled.css">
+
+
+    <link href="/admin/assets/weather/css/weather-icons.css" rel="stylesheet" />
+    <link href="/admin/assets/calendar/fullcalendar.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/admin/assets/css/style.css">
+    <link href="/admin/assets/css/charts/chartist.min.css" rel="stylesheet">
+    <link href="/admin/assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+    #weatherWidget .currentDesc {
+        color: #ffffff!important;
+    }
+        .traffic-chart {
+            min-height: 335px;
+        }
+        #flotPie1  {
+            height: 150px;
+        }
+        #flotPie1 td {
+            padding:3px;
+        }
+        #flotPie1 table {
+            top: 20px!important;
+            right: -10px!important;
+        }
+        .chart-container {
+            display: table;
+            min-width: 270px ;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #flotLine5  {
+             height: 105px;
+        }
+
+        #flotBarChart {
+            height: 150px;
+        }
+        #cellPaiChart{
+            height: 160px;
+        }
+
+    </style>
+  </head>
+
+  <body>
+
+
+        <!-- Left Panel -->
+        <aside id="left-panel" class="left-panel">
+            <nav class="navbar navbar-expand-sm navbar-default">
+                <div id="main-menu" class="main-menu collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/admin_dashboard/index"><i class="menu-icon fa fa-laptop"></i>Dashboard</a>
+                        </li>
+                        <li class="menu-title">Application Settings</li><!-- /.menu-title -->
+                        <li class="menu-item">
+                            <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Components</a>
+                        </li>
+
+                        <li class="menu-title">System Settings</li><!-- /.menu-title -->
+                        <li class="menu-item">
+                          <a href="<%= us_states_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-flag"></i>States</a>
+                          <a href="<%= insurance_programs_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-product-hunt"></i>Insurance Programs</a>
+                          <a href="<%= limits_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sort"></i>Limits</a>
+                          <a href="<%= field_types_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-briefcase"></i>Classes or Field Types</a>
+                          <a href="<%= insurance_ranges_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-random"></i>Ranges</a>
+                          <a href="<%= calculation_types_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-calculator"></i>Calculation Types</a>
+                          <a href="<%= financial_institutions_path %>" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-building"></i>Financial Institutions</a>
+                        </li>
+
+
+                        <li class="menu-title">Admin</li><!-- /.menu-title -->
+                        <li class="menu-item">
+                            <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Users</a>
+                            <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-circle"></i>Roles</a>
+                            <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cc-visa"></i>Ecommerce</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </aside><!-- /#left-panel -->
+        <!-- Left Panel -->
+
+
+
+        <!-- Right Panel -->
+        <div id="right-panel" class="right-panel">
+
+            <!-- Header-->
+            <header id="header" class="header">
+                <div class="top-left">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="./"><img src="/admin/images/logo.png" alt="Logo"></a>
+                        <a class="navbar-brand hidden" href="./"><img src="/admin/images/logo2.png" alt="Logo"></a>
+                        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="header-menu">
+                        <div class="header-left">
+                        </div>
+
+                        <div class="user-area dropdown float-right">
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="user-avatar rounded-circle" src="/admin/images/admin.jpg" alt="User Avatar">
+                            </a>
+                            <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
+                                <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header><!-- /header -->
+            <!-- Header-->
+
+
+            <div class="content pb-0">
+
+                <!-- Widgets  -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-1">
+                                        <i class="pe-7f-cash"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text">$<span class="count">23569</span></div>
+                                            <div class="stat-heading">Revenue</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-2">
+                                        <i class="pe-7f-cart"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text"><span class="count">3435</span></div>
+                                            <div class="stat-heading">Sales</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-3">
+                                        <i class="pe-7f-browser"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text"><span class="count">349</span></div>
+                                            <div class="stat-heading">Billed</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-4">
+                                        <i class="pe-7f-users"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text"><span class="count">2986</span></div>
+                                            <div class="stat-heading">Clients</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Widgets End -->
+
+
+                <!--  Traffic  -->
+                
+
+                                      <%= yield %>
+
+                <!--  Traffic  End -->
+            <div class="clearfix"></div>
+            </div> <!-- .content -->
+            <div class="clearfix"></div>
+
+            <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 National Contractor Insurance
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            Created by <a href="https://nestorbenavidez.site">Helenica Analitica</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div><!-- /#right-panel -->
+
+        <script src="/admin/assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="/admin/assets/js/popper.min.js"></script>
+        <script src="/admin/assets/js/plugins.js"></script>
+        <script src="/admin/assets/js/main.js"></script>
+    <div id="container">
+
+
+
+    </div>
+
+
+  </body>
+</html>

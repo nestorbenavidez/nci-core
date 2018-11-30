@@ -1,0 +1,2 @@
+module InsuranceRangesHelper
+end

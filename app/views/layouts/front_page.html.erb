@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>National Contractor Insurance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="assets/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Roboto+Condensed:400,300,700" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/color/default.css" rel="stylesheet" />
+  <!--  <link rel="stylesheet" type="text/css" href="assets/css/InsuranceCalculator.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="assets/js/InsuranceCalc.js"></script>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <header>
+      <!-- start top -->
+      <div id="topnav" class="navbar navbar-fixed-top default">
+        <div class="navbar-inner">
+          <div class="container">
+            <div class="logo">
+              <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+            </div>
+            <div class="navigation">
+              <nav>
+                <ul class="nav pull-right">
+                  <li class="current"><a href="#intro">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Our services</a></li>
+                  <li><a href="#works">FREE Quote!</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <!-- end top -->
+    </header>
+    <!-- section intro -->
+    <section id="intro">
+      <div class="slogan">
+        <div class="icon">
+          <i class="icon-home icon-10x"></i>
+        </div>
+        <h1>Welcome to National Contractor <span>Insurance</span></h1>
+        <h2>Lift Your Business to Greater Heights</h2>
+      </div>
+    </section>
+    <!-- end intro -->
+    <!-- Section about -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="heading">
+              <h3><span>About us</span></h3>
+            </div>
+            <div class="sub-heading">
+              <p>
+                We may be a start-up, but we’re working hard to earn your business.
+                To ensure that we are around for the long haul, we’ve partnered with the biggest names in the industry.
+                You can rest assured that we’ll still be here when you need to file a claim.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span3">
+            <img src="assets/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+            <div class="roles">
+              <h5><strong>Sergio Guzman</strong></h5>
+              <p>
+                CEO - Founder
+              </p>
+              <ul class="social-profile">
+                <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3">
+            <img src="assets/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+            <div class="roles">
+              <h5><strong>Nestor Benavidez</strong></h5>
+              <p>
+                IT Manager
+              </p>
+              <ul class="social-profile">
+                <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3">
+            <img src="assets/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+            <div class="roles">
+              <h5><strong>Sergio Guzman</strong></h5>
+              <p>
+                Customer support
+              </p>
+              <ul class="social-profile">
+                <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3">
+            <img src="assets/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+            <div class="roles">
+              <h5><strong>Sergio Guzman</strong></h5>
+              <p>
+                Sales
+              </p>
+              <ul class="social-profile">
+                <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section about -->
+    <!-- section services -->
+    <section id="services" class="section parallax dark">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="heading">
+              <h3><span>Our services</span></h3>
+            </div>
+            <div class="sub-heading">
+              <p>
+                Buy your policy 100% online in minutes, whenever and wherever you choose.
+                Pay monthly, with amazing prices and absolutely no extra fees.
+                Your business insurance coverage is designed to meet your needs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span3">
+            <div class="box aligncenter">
+              <div class="halftop">
+                <h4><strong>Support</strong></h4>
+                <i class="icon-headphones icon-4x"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
+              </p>
+              <a href="#" class="btn btn-theme">Learn more</a>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="box aligncenter">
+              <div class="halftop">
+                <h4><strong>Coverage</strong></h4>
+                <i class="icon-ok-sign icon-4x"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
+              </p>
+              <a href="#" class="btn btn-theme">Learn more</a>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="box aligncenter">
+              <div class="halftop">
+                <h4><strong>Who we ensure</strong></h4>
+                <i class="icon-thumbs-up icon-4x"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
+              </p>
+              <a href="#" class="btn btn-theme">Learn more</a>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="box aligncenter">
+              <div class="halftop">
+                <h4><strong>Partners</strong></h4>
+                <i class="icon-group icon-4x"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
+              </p>
+              <a href="#" class="btn btn-theme">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section services -->
+    <!-- section works -->
+    <section id="works" class="section gray-bg">
+
+      <style>
+
+        input[type=radio].css-checkbox {
+          display:none;
+        }
+
+        input[type=radio].css-checkbox + label.css-label {
+          padding-left:33px;
+          height:28px;
+          display:inline-block;
+          line-height:28px;
+          background-repeat:no-repeat;
+          background-position: 0 0;
+          font-size:18px;
+          vertical-align:middle;
+          cursor:pointer;
+        }
+
+        input[type=radio].css-checkbox:checked + label.css-label {
+          background-position: 0 -28px;
+        }
+
+        label.css-label {
+          background-image:url("http://www.amymorrisclark.com/Portfolio/images/radbutton.png");
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+
+
+      </style>
+
+
+      <div style="{
+    margin: auto;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    box-shadow: 2px 2px 0px 0 rgba(0, 0, 0, .20);
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, .80);
+
+  }">
+        <div class="row">
+          <div class="span12">
+            <div class="heading">
+              <h3><span>Free quote!</span></h3>
+            </div>
+            <div class="sub-heading">
+              <p>
+                Take Advantage of Every Opportunity. Get your quote today!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+            <ul style="{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+  }">
+              <li style="{
+    margin: 30px 0;
+    font-weight: bold;
+  }">
+
+                <form id="sex"><legend>Type of Claim</legend> <fieldset style="{
+                                                              border:none;
+                                                              margin-top: 10px;
+                                                              padding:0;
+                                                              font-weight:normal;
+                                                              }">
+                <input type="radio" name="sex" value="20" id="Female" class="firstInput css-checkbox" />
+                <label class="css-label" for="Female">PCA</label>
+                <input type="radio" name="sex" value="30" id="Male" class="css-checkbox" />
+                <label class="css-label" for="Male">PCA Claims Made</label></fieldset>
+              </form>
+
+              </li>
+              <li style="{
+    margin: 30px 0;
+    font-weight: bold;
+  }">
+                <form id="age"><legend>Limit</legend><fieldset style="{
+                  border:none;
+                  margin-top: 10px;
+                  padding:0;
+                  font-weight:normal;"
+                  }>
+                  <input type="radio" id="sixteen" name="age" value="40" class="firstInput css-checkbox" />
+                  <label class="css-label" for="sixteen">1M/1M/1M</label>
+                  <input id="twentysix" type="radio" name="age" value="30" class="css-checkbox" />
+                  <label class="css-label" for="twentysix">1M/2M/2M</label></fieldset>
+                </form>
+              </li>
+              <li style="{
+    margin: 30px 0;
+    font-weight: bold;
+  }">Self insured retention
+                <select name="color" id="car" style=" {
+    margin-left: 5px;
+  }">
+                  <option selected value="0"> -- select an option -- </option>
+                  <option value="80">1000</option>
+                  <option value="50">2500</option>
+                  <option value="50">5000</option>
+                  <option value="30">10000</option>
+                  <option value="50">12500</option>
+                </select>
+              </li>
+              <li style="{
+    margin: 30px 0;
+    font-weight: bold;
+  }">Losses in the last 5 years
+                <select name="year" id="year" style=" {
+    margin-left: 5px;
+  }">
+                  <option selected value="0"> -- select an option -- </option>
+                  <option value="60">1</option>
+                  <option value="40">2</option>
+                  <option value="60">3+</option>
+                </select></li>
+              <li style="{
+    margin: 30px 0;
+    font-weight: bold;
+  }">Entity
+                <select name="citations" id="citations" style=" {
+    margin-left: 5px;
+  }">
+                  <option selected value="0"> -- select an option -- </option>
+                  <option value="20">Individual</option>
+                  <option value="30">Corporation</option>
+                  <option value="40">Partnership</option>
+                </select>
+              </li>
+
+              <li style="{
+    margin: 30px 0;
+    font-weight: bold;
+  }">Estimated total gross receipts
+                <input type="text" name="carv" id="carv" value="0" style="{
+    margin-left: 25px;
+  }"><br>
+              </li>
+
+
+            </ul>
+            <hr style=" {
+    color: rgba(0,0,0,.20);
+    margin-bottom: 20px;
+  }">
+            <p class="total" style="{
+    font-weight: bold;
+    font-size: 25px;
+  }">Total:</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- section works -->
+    <!-- section contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="heading">
+              <h3><span>Get in touch</span></h3>
+            </div>
+            <div class="sub-heading">
+              <p>
+                Feel free to get in touch with us. We show you the way!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d392565.2039508195!2d-105.13531075101632!3d39.764002082522104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO%2C+USA!5e0!3m2!1sen!2suy!4v1535015862473" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="span6">
+            <h4><i class="icon-envelope"></i><strong>Contact form</strong></h4>
+            <p>
+              Want to work with us or just want to say hello? Don't hesitate to get in touch!
+            </p>
+            <!-- start contact form -->
+            <form action="" method="post" role="form" class="contactForm">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+
+              <ul class="contact-list">
+                <li class="form-group">
+                  <label>Name <span>*</span></label>
+                  <input type="text" name="name" class="form_input" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                  <li class="form-group">
+                    <label>Email <span>*</span></label>
+                    <input type="email" class="form_input" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </li>
+                  <li class="form-group">
+                    <label>Subject <span>*</span></label>
+                    <input type="text" class="form_input" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validation"></div>
+                  </li>
+
+                  <li class="form-group">
+                    <label>Your message <span>*</span></label>
+                    <textarea class="form_textarea" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validation"></div>
+                  </li>
+                  <li class="last">
+                    <button class="btn btn-large btn-theme" type="submit" id="send">Send a message</button>
+                  </li>
+              </ul>
+            </form>
+
+            <!-- end contact form -->
+          </div>
+          <div class="span6">
+            <h4><i class="icon-suitcase"></i><strong>Our office</strong></h4>
+            <p>
+              Feel free to ask if you have any question regarding our services or if you just want to say Hello, we would love to hear from you.
+            </p>
+            <div class="dotted_line">
+            </div>
+            <p>
+              <strong>National Contractor Insurance</strong>
+            </p>
+            <p>
+              123 N Street South,  Denver, Colorado 00000
+            </p>
+            <p>
+              <span><i class="icon-phone"></i><strong>Phone:</strong> +123 123 123 12 or +123 123 123 22</span>
+            </p>
+            <p>
+              <span><i class="icon-comment"></i><strong>Skype:</strong> sergio.guzman</span>
+            </p>
+            <p>
+              <span><i class="icon-envelope-alt"></i><strong>Email:</strong> sergio@nationalcontractorinsurance.com</span>
+            </p>
+            <div class="dotted_line">
+            </div>
+            <h4><i class="icon-group"></i><strong>Connect to our social profiles</strong></h4>
+            <div class="social-links">
+              <ul class="social-links">
+                <li><a href="#" title="Twitter"><i class="icon-square icon-32 icon-twitter"></i></a></li>
+                <li><a href="#" title="Facebook"><i class="icon-square icon-32 icon-facebook"></i></a></li>
+                <li><a href="#" title="Google plus"><i class="icon-square icon-32 icon-google-plus"></i></a></li>
+                <li><a href="#" title="Linkedin"><i class="icon-square icon-32 icon-linkedin"></i></a></li>
+                <li><a href="#" title="Pinterest"><i class="icon-square icon-32 icon-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section contact -->
+
+    <footer>
+      <div class="verybottom">
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+              <div class="aligncenter">
+                <div class="logo">
+                  <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+                </div>
+                <p>
+                  Copyright &copy; 2018 National Insurance Contractor - All right reserved
+                </p>
+                <div class="credits">
+                   <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                     Hand-crafted & made in Denver
+                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+
+    <!-- Javascript Library Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/parallax/jquery.parallax-1.1.3.js"></script>
+    <script src="assets/js/nagging-menu.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/prettyPhoto/jquery.prettyPhoto.js"></script>
+    <script src="assets/js/portfolio/jquery.quicksand.js"></script>
+    <script src="assets/js/portfolio/setting.js"></script>
+    <script src="assets/js/hover/jquery-hover-effect.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/animate.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Custom Javascript File -->
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

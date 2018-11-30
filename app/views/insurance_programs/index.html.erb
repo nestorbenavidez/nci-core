@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Insurance Programs</strong>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                  <th>Name</th>
+                  <th>Broder fee</th>
+                  <th>Inspection fee</th>
+                  <th>Surplus tax</th>
+                  <th>Us state</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <% @insurance_programs.each do |insurance_program| %>
+                  <td><%= insurance_program.name %></td>
+                  <td><%= insurance_program.broder_fee %></td>
+                  <td><%= insurance_program.inspection_fee %></td>
+                  <td><%= insurance_program.surplus_tax %></td>
+                  <td><%= insurance_program.us_state %></td>
+                  <td><%= link_to 'Show', insurance_program %></td>
+                  <td><%= link_to 'Edit', edit_insurance_program_path(insurance_program) %></td>
+                  <td><%= link_to 'Destroy', insurance_program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                 <% end %>
+              </tr>
+            </tbody>
+        </table>
+        <br>
+      </div>
+      <%= link_to 'New Insurance Program', new_insurance_program_path %>
+    </div>
+</div>
