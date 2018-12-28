@@ -1,2 +1,0 @@
-class UsState < ApplicationRecord
-end

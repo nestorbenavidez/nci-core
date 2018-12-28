@@ -10,65 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_125700) do
+ActiveRecord::Schema.define(version: 2018_12_28_075002) do
 
-  create_table "calculation_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "field_type_id"
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "crypted_password"
+    t.string "salt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["field_type_id"], name: "index_calculation_types_on_field_type_id"
-  end
-
-  create_table "field_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "insurance_program_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["insurance_program_id"], name: "index_field_types_on_insurance_program_id"
-  end
-
-  create_table "financial_institutions", force: :cascade do |t|
-    t.string "name"
-    t.decimal "apr"
-    t.integer "insurance_program_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["insurance_program_id"], name: "index_financial_institutions_on_insurance_program_id"
-  end
-
-  create_table "insurance_programs", force: :cascade do |t|
-    t.string "name"
-    t.decimal "broder_fee"
-    t.decimal "inspection_fee"
-    t.decimal "surplus_tax"
-    t.integer "us_state_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["us_state_id"], name: "index_insurance_programs_on_us_state_id"
-  end
-
-  create_table "insurance_ranges", force: :cascade do |t|
-    t.string "name"
-    t.integer "calculation_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["calculation_type_id"], name: "index_insurance_ranges_on_calculation_type_id"
-  end
-
-  create_table "limits", force: :cascade do |t|
-    t.string "name"
-    t.integer "insurance_program_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["insurance_program_id"], name: "index_limits_on_insurance_program_id"
-  end
-
-  create_table "us_states", force: :cascade do |t|
-    t.string "name"
-    t.string "initials"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
