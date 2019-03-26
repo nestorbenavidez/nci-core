@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Apr:</strong>
+  <%= @name.apr %>
+</p>
+
+<p>
+  <strong>Insurance program:</strong>
+  <%= @name.insurance_program %>
+</p>
+
+<%= link_to 'Edit', edit_name_path(@name) %> |
+<%= link_to 'Back', names_path %>

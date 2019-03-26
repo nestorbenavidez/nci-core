@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @limit.name %>
+</p>
+
+<p>
+  <strong>Insurance program:</strong>
+  <%= @limit.insurance_program %>
+</p>
+
+<%= link_to 'Edit', edit_limit_path(@limit) %> |
+<%= link_to 'Back', limits_path %>

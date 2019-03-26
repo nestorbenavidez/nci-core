@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Insurance Programs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Broker fee</th>
+      <th>Inspection fee</th>
+      <th>Surplus fee</th>
+      <th>Surplus tax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insurance_programs.each do |insurance_program| %>
+      <tr>
+        <td><%= insurance_program.name %></td>
+        <td><%= insurance_program.broker_fee %></td>
+        <td><%= insurance_program.inspection_fee %></td>
+        <td><%= insurance_program.surplus_fee %></td>
+        <td><%= insurance_program.surplus_tax %></td>
+        <td><%= link_to 'Show', insurance_program %></td>
+        <td><%= link_to 'Edit', edit_insurance_program_path(insurance_program) %></td>
+        <td><%= link_to 'Destroy', insurance_program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Insurance Program', new_insurance_program_path %>

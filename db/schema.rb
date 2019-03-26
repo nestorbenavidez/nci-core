@@ -10,7 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_28_075002) do
+ActiveRecord::Schema.define(version: 2019_03_26_171057) do
+
+  create_table "calculation_ranges", force: :cascade do |t|
+    t.string "name"
+    t.decimal "value"
+    t.integer "insurance_program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["insurance_program_id"], name: "index_calculation_ranges_on_insurance_program_id"
+  end
+
+  create_table "field_classes", force: :cascade do |t|
+    t.string "name"
+    t.integer "insurance_program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["insurance_program_id"], name: "index_field_classes_on_insurance_program_id"
+  end
+
+  create_table "insurance_programs", force: :cascade do |t|
+    t.string "name"
+    t.decimal "broker_fee"
+    t.decimal "inspection_fee"
+    t.decimal "surplus_fee"
+    t.decimal "surplus_tax"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "limits", force: :cascade do |t|
+    t.string "name"
+    t.integer "insurance_program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["insurance_program_id"], name: "index_limits_on_insurance_program_id"
+  end
+
+  create_table "names", force: :cascade do |t|
+    t.string "apr"
+    t.integer "insurance_program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["insurance_program_id"], name: "index_names_on_insurance_program_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false

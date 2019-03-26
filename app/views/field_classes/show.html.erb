@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @field_class.name %>
+</p>
+
+<p>
+  <strong>Insurance program:</strong>
+  <%= @field_class.insurance_program %>
+</p>
+
+<%= link_to 'Edit', edit_field_class_path(@field_class) %> |
+<%= link_to 'Back', field_classes_path %>

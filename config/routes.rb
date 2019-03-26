@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  resources :names
+  resources :calculation_ranges
+  resources :field_classes
+  resources :limits
+  resources :insurance_programs
   get 'user_sessions/new'
   get 'user_sessions/create'
   get 'user_sessions/destroy'
   resources :users
   get 'dashboard/index'
-  resources :user_sessions
+  #resources :user_sessions
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout

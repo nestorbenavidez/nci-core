@@ -1,0 +1,2 @@
+class FieldClass < ApplicationRecord
+end

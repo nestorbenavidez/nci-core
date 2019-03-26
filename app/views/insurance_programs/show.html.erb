@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @insurance_program.name %>
+</p>
+
+<p>
+  <strong>Broker fee:</strong>
+  <%= @insurance_program.broker_fee %>
+</p>
+
+<p>
+  <strong>Inspection fee:</strong>
+  <%= @insurance_program.inspection_fee %>
+</p>
+
+<p>
+  <strong>Surplus fee:</strong>
+  <%= @insurance_program.surplus_fee %>
+</p>
+
+<p>
+  <strong>Surplus tax:</strong>
+  <%= @insurance_program.surplus_tax %>
+</p>
+
+<%= link_to 'Edit', edit_insurance_program_path(@insurance_program) %> |
+<%= link_to 'Back', insurance_programs_path %>

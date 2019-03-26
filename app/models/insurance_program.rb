@@ -1,0 +1,2 @@
+class InsuranceProgram < ApplicationRecord
+end

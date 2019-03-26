@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Field Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Insurance program</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @field_classes.each do |field_class| %>
+      <tr>
+        <td><%= field_class.name %></td>
+        <td><%= field_class.insurance_program %></td>
+        <td><%= link_to 'Show', field_class %></td>
+        <td><%= link_to 'Edit', edit_field_class_path(field_class) %></td>
+        <td><%= link_to 'Destroy', field_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Field Class', new_field_class_path %>

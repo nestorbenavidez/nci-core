@@ -1,0 +1,2 @@
+class CalculationRange < ApplicationRecord
+end

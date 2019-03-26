@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @calculation_range.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @calculation_range.value %>
+</p>
+
+<p>
+  <strong>Insurance program:</strong>
+  <%= @calculation_range.insurance_program %>
+</p>
+
+<%= link_to 'Edit', edit_calculation_range_path(@calculation_range) %> |
+<%= link_to 'Back', calculation_ranges_path %>
