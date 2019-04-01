@@ -14,6 +14,8 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag :cocoon %>
+
   </head>
 
   <body>
@@ -73,13 +75,15 @@
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="/dashboard/index"><i class="menu-icon icon-dashboard"></i>Dashboard<b class="label orange pull-right">PLA</b></a></li>
-                                <li><a href="activity.html"><i class="menu-icon icon-tasks"></i>Field Class <b class="label green pull-right">IMP</b></a></li>
+                                <li><a href='<%= field_classes_path  %>'><i class="menu-icon icon-tasks"></i>Field Class <b class="label green pull-right">IMP</b></a></li>
                                 <li><a class="collapsed" data-toggle="collapse" href="#togglePages1"><i class="menu-icon icon-cog">
                                 </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
                                 </i>Class Settings</a>
                                   <ul id="togglePages1" class="collapse unstyled">
-                                      <li><a href='<%= user_path(current_user.id) %>'><i class="icon-inbox"></i>Profile</a></li>
-                                      <li><a href='<%= users_path %>'><i class="icon-inbox"></i>All Users</a></li>
+                                      <li><a href='<%= insurance_programs_path %>'><i class="icon-inbox"></i>Insurance Programs</a></li>
+                                      <li><a href='<%= limits_path %>'><i class="icon-inbox"></i>Limits</a></li>
+                                      <li><a href='<%= calculation_ranges_path %>'><i class="icon-inbox"></i>Ranges</a></li>
+                                      <li><a href='<%= financial_institutions_path %>'><i class="icon-inbox"></i>Financial institutions</a></li>
                                   </ul>
                                 </li>
                             </ul>

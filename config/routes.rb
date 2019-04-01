@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :financial_institutions
   resources :names
   resources :calculation_ranges
   resources :field_classes
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   get 'user_sessions/destroy'
   resources :users
   get 'dashboard/index'
-  #resources :user_sessions
+  resources :user_sessions
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout

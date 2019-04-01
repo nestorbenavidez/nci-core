@@ -69,6 +69,7 @@ class InsuranceProgramsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def insurance_program_params
-      params.require(:insurance_program).permit(:name, :broker_fee, :inspection_fee, :surplus_fee, :surplus_tax)
+      params.require(:insurance_program).permit(:name, :broker_fee, :inspection_fee, :surplus_fee, :surplus_tax, :calc_type, field_classes_attributes: [:id, :name])
     end
+
 end

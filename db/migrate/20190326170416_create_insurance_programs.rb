@@ -6,7 +6,7 @@ class CreateInsurancePrograms < ActiveRecord::Migration[5.2]
       t.decimal :inspection_fee
       t.decimal :surplus_fee
       t.decimal :surplus_tax
-
+      t.boolean :calc_type
       t.timestamps
     end
   end

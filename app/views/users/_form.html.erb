@@ -1,5 +1,6 @@
 
-<%= form_with(model: user, local: true) do |form| %>
+<%= simple_form_for(@user, html: { class: 'form-inline' }) do |form| %>
+
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -13,20 +14,19 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.input :email %>
   </div>
 
   <div class="field">
-   <%= form.label :password %><br />
-   <%= form.password_field :password %>
+   <br />
+   <%= form.input :password %>
   </div>
   <div class="field">
-   <%= form.label :password_confirmation %><br />
-   <%= form.password_field :password_confirmation %>
+   <br />
+   <%= form.input :password_confirmation %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.button :submit %>
   </div>
 <% end %>
